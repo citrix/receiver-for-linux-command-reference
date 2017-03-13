@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Citrix Receiver for Linux 13.5 Command-line Reference">
+  
+  
+  <title>Citrix Receiver for Linux 13.5 Command-line Reference</title>
+  
+
+  <link rel="shortcut icon" href="
+https://www.citrix.com/etc/designs/citrix/icon-favicon.png">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="./css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="./css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/highlight.css">
+  <link rel="stylesheet" href="./css/override.css" type="text/css" />
+  <link rel="stylesheet" href="./css/font-awesome.css" type="text/css" />
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "None";
+    var mkdocs_page_input_path = "index.md";
+    var mkdocs_page_url = "/";
+  </script>
+  
+  <script src="./js/jquery-1.10.2.min.js"></script>
+  <script src="./js/bootstrap-3.0.3.min.js"></script>
+  <script src="./js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="./js/highlight.pack.js"></script>
+  <script src="./js/theme.js"></script>
+  <script src="./js/base.js"></script>
+  <script src="./js/custom.js"></script>
+  <script src="./js/nav.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document" data-spy="scroll" data-target=".bs-sidebar">
+
+	<div class="header-top">
+		<div class="header-top-left">
+			<a href="http://citrix.github.io" class="logo-position"><img height="60" src="https://thumbnail-ec2.sharefile.com/thumbnail.aspx?encparams=ypL2J0l-In6gqXJ7yeyKP8A1rqwKMH-C8-nfkJcHJNIN7Y0yZiJsYOcUe-uc0YeZzWLQSFSd1FnuMHPa30XSSINHuGOA8nvvnBT5WmjGlKvd5mxJ4IfT7iTVyHELwhWQiNCznPCiIFyhkA78uKX77PlU2iyhM4YdRM1NKabBe-4wXuiFJsbtAxyJ2UukO_E2ZSf1W3l75Dw8G0zflVkT-EFqyx1zSGId0qzLjm6nzJ8dA9zo-1AJzUisdzmGMzHOq_LMsOWyaalvmcWvCkl-q10GBSbfekfTIFW9LpZNYjkLNSnK8rcwNjWVr_jYayrGjIj2e5dDIMiDj3NRvW51AvHRjxYH9xRRRtY$" target="_blank" class="logo-citrix"><span style="color:#fff;font-size: 20px;position: relative;top:4px;left: 5px">SDK Reference</span></a>
+		</div>
+		<div class="header-top-right">
+			<ul>
+			<!--	<li class="list-inline home"><a href=".">HOME</a></li>
+				<li class="list-inline support"><a href="http://support.citrix.com">SUPPORT</a></li>-->
+				<form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+            <li class="list-inline support"><input name="q" id="txtName" type="text" placeholder="Search SDKs"
+            class="searchdocs">
+<a class="fa fa-search errspan"></a></li>
+</form>
+				<!--<li class="list-inline"><a href="http://citrix.com/download">DOWNLOADS</a></li>-->
+			</ul>
+
+		</div>
+	</div>
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+	<i class="fa fa-search"></i>
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" role="navigation" aria-label="main navigation">
+			<div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#command-line-parameters">Command-line parameters</a></li>
+        
+            <li><a href="#wfica">wfica</a></li>
+        
+            <li><a href="#storebrowse">storebrowse</a></li>
+        
+            <li><a href="#pnabrowse">pnabrowse</a></li>
+        
+    
+    </ul>
+</div>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+         <!-- <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Index</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div> -->
+          <div role="main">
+            <div class="section">
+             
+                <h1 id="command-line-parameters"><a class="toclink" href="#command-line-parameters">Command-line parameters</a></h1>
+<p>The tables below list Citrix Receiver for Linux command-line parameters. </p>
+<div class="admonition tip">
+<p class="admonition-title">Note<p>A list of the parameters can be obtained typing <code>wfica</code> or <code>storebrowse</code> with 
+the <code>-?</code>, <code>-help</code>, or <code>-h</code> options.</p>
+</p>
+</div>
+<h2 id="wfica"><a class="toclink" href="#wfica">wfica</a></h2>
+<p>You can use a connection file simply by typing its name after <code>wfica</code> without any of the following options.</p>
+<table>
+<thead>
+<tr>
+<th>To</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Specify the custom connection to use from the Connection file. <br/> <br/> <strong>Note:</strong> With the new self-service UI, you cannot set up a custom connection in this way.</td>
+<td><code>-desc &lt;description&gt;</code> or <code>-description &lt;description&gt;</code></td>
+</tr>
+<tr>
+<td>Specify a desktop file used for launch.</td>
+<td><code>-desktop &lt;filename&gt;</code></td>
+</tr>
+<tr>
+<td>Specify a connection file.</td>
+<td><code>-file connection &lt;filename&gt;</code></td>
+</tr>
+<tr>
+<td>Set alternative protocol file. This enables the use of an alternative module.ini.</td>
+<td><code>-protocolfile filename</code></td>
+</tr>
+<tr>
+<td>Set alternative client configuration file. This enables the use of an alternative wfclient.ini.</td>
+<td><code>-clientfile filename</code></td>
+</tr>
+<tr>
+<td>Display a different name for Citrix Receiver, specified by name, wherever that name appears. The default name is the device name. However, if you use a Sunray device, the default name is derived from the device’s MAC address. This is overridden by the ClientName entry in .ICAClient/wfclient.ini, which is itself overridden by issuing the <code>-clientname</code> name command.</td>
+<td><code>-clientname name</code></td>
+</tr>
+<tr>
+<td>Show this list of parameters.</td>
+<td><code>-help</code></td>
+</tr>
+<tr>
+<td>Display version information.</td>
+<td><code>-version</code></td>
+</tr>
+<tr>
+<td>Show error numbers and string.</td>
+<td><code>-errno</code></td>
+</tr>
+<tr>
+<td>Set the location of Receiver installation files. This is equivalent to setting the ICAROOT environment variable.</td>
+<td><code>--icaroot directory</code></td>
+</tr>
+<tr>
+<td>Suppress connection dialog boxes.</td>
+<td><code>-quiet</code></td>
+</tr>
+<tr>
+<td>Enable key logging.</td>
+<td><code>-keylog</code></td>
+</tr>
+<tr>
+<td>Set session geometry.</td>
+<td><code>-geometry WxH+X+Y</code></td>
+</tr>
+<tr>
+<td>Set color depth.</td>
+<td><code>-depth &lt;4 | 8 | 16 | 24 | auto&gt;</code></td>
+</tr>
+<tr>
+<td>Set monitor spanning.</td>
+<td><code>-span [h][o][a|mon1[,mon2[,mon3,mon4]]]</code></td>
+</tr>
+<tr>
+<td>Use private colormap.</td>
+<td><code>-private</code></td>
+</tr>
+<tr>
+<td>Use shared colormap.</td>
+<td><code>-shared</code></td>
+</tr>
+<tr>
+<td>Specify a string to be added to a published application.</td>
+<td><code>-param string</code></td>
+</tr>
+<tr>
+<td>Specify the UNIX path to be accessed through client drive mapping by a published application.</td>
+<td><code>-fileparam unixpath</code></td>
+</tr>
+<tr>
+<td>Specify a user name.</td>
+<td><code>-username username</code></td>
+</tr>
+<tr>
+<td>Specify a disguised password.</td>
+<td><code>-password password</code></td>
+</tr>
+<tr>
+<td>Specify a clear text password.</td>
+<td><code>-clearpassword "clear password"</code></td>
+</tr>
+<tr>
+<td>Specify a domain.</td>
+<td><code>-domain domain</code></td>
+</tr>
+<tr>
+<td>Specify an initial program.</td>
+<td><code>-program program</code></td>
+</tr>
+<tr>
+<td>Specify a directory for the initial program to use.</td>
+<td><code>-directory directory</code></td>
+</tr>
+<tr>
+<td>Turn on sound.</td>
+<td><code>-sound</code></td>
+</tr>
+<tr>
+<td>Turn off sound</td>
+<td><code>-nosound</code></td>
+</tr>
+<tr>
+<td>Set drive mapping overrides. These are of the form <code>A$=path</code>, where <strong>path</strong> can contain an environment variable (for example <code>A$=$HOME/tmp</code>). This option must be repeated for each drive to be overridden. For the override to work, there must be an existing mapping, although it need not be enabled.</td>
+<td><code>-drivemap string</code></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Note<p>All <code>wfica</code> command line options can also be specified in the environment variable <code>WFICA_OPTS</code>, allowing them to be used with the Receiver native UI or with Citrix StoreFront.</p>
+</p>
+</div>
+<h2 id="storebrowse"><a class="toclink" href="#storebrowse">storebrowse</a></h2>
+<p>The following table documents the options that you can use with the <code>storebrowse</code> utility.</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-L</code>, <code>--launch</code></td>
+<td>Specifies the name of the published resource to which you want to connect. This launches a connection to a published resource. The utility then terminates, leaving a successfully connected session.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>-E</code>, <code>--enumerate</code></td>
+<td>Enumerates the available resources.</td>
+<td>By default, the resource name, display name, and folder of the resource are displayed. Additional information can be displayed, by using the <code>--details</code> option.</td>
+</tr>
+<tr>
+<td><code>-S</code>, <code>--subscribed</code></td>
+<td>Lists the subscribed resources.</td>
+<td>By default, the resource name, display name, and folder of the resource are displayed. Additional information can be displayed using the <code>--details</code> option.</td>
+</tr>
+<tr>
+<td><code>-M</code>, <code>--details</code> Use in conjunction with the <code>-E</code> or <code>-S</code> option.</td>
+<td>Selects which attributes of published applications are returned. This option takes an argument that is the sum of the numbers corresponding to the required details: <code>Publisher(0x1)</code>, <code>VideoType(0x2)</code>, <code>SoundType(0x4)</code>, <code>AppInStartMenu(0x8)</code>, <code>AppOnDesktop(0x10)</code>, <code>AppIsDesktop(0x20)</code>, <code>AppIsDisabled(0x40)</code>, <code>WindowType(0x80)</code>, <code>WindowScale(0x100)</code>, <code>DisplayName(0x200)</code>, and <code>AppIsMandatory(0x10000)</code>. <code>CreateShortcuts(0x100000)</code> can be used in conjunction with <code>-S</code>, <code>-s</code>, and <code>-u</code> to create menu entries for subscribed applications. <code>RemoveShortcuts(0x200000)</code> can be used with <code>-S</code> to delete all menu entries.</td>
+<td>Some of these details are not available through storebrowse. If this is the case, the output is 0. Values can also be expressed in decimal as well as hexadecimal (for example, 512 for 0x200).</td>
+</tr>
+<tr>
+<td><code>-v</code>, <code>--version</code></td>
+<td>Writes the version number of <code>storebrowse</code> to the standard output.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>-?</code>, <code>-h</code>, <code>--help</code></td>
+<td>Lists the usage for <code>storebrowse</code>.</td>
+<td>An abbreviated version of this table appears.</td>
+</tr>
+<tr>
+<td><code>-U</code>, <code>--username</code></td>
+<td>Passes the user name to the server.</td>
+<td>When used with StoreFront, the site must be configured to support HTTP BasicAuth, otherwise these will be ignored.</td>
+</tr>
+<tr>
+<td><code>-P</code>, <code>--password</code></td>
+<td>Passes the password to the server.</td>
+<td>When used with StoreFront, the site must be configured to support HTTP BasicAuth, otherwise these will be ignored.</td>
+</tr>
+<tr>
+<td><code>-D</code>, <code>--domain</code></td>
+<td>Passes the domain to the server.</td>
+<td>When used with StoreFront, the site must be configured to support HTTP BasicAuth, otherwise these will be ignored.</td>
+</tr>
+<tr>
+<td><code>-r</code>, <code>--icaroot</code></td>
+<td>Specifies the root directory of the Receiver for Linux installation.</td>
+<td>If not specified, the value is determined at run time.</td>
+</tr>
+<tr>
+<td><code>-i</code>, <code>--icons</code> Use in conjunction with the <code>-E</code>, or <code>-S</code> option.</td>
+<td>Fetches desktop or application icons, in PNG format, of the size and depth given by the <code>best</code> or <code>size</code> argument.<br/> If the <code>best</code> argument is used, the best sized icon available on the server is fetched. You can convert this to any size required. The <code>best</code> argument is the most efficient for storage and bandwidth, and can simplify scripting. <br/> If the <code>size</code> argument is used, an icon is fetched of the specified size and depth. <br/> In both cases, icons are saved in a file for each of the resources that the <code>–E</code> or <code>-S</code> option returns.</td>
+<td>The <code>best</code> argument creates an icon of the form <strong>&lt;resource name&gt;.png</strong>. <br/>The <code>size</code> argument is of the form <strong>WxB</strong>, where <strong>W</strong> is the width of the icon (all icons are square, so only one value is needed to specify the size), and <strong>B</strong> is the color depth (that is, the number of bits per pixel). <strong>W</strong> is required but <strong>B</strong> is optional. If it is not specified, icons of all available image depths are fetched for that size. The files that are created are named <strong>&lt;resource name&gt;_WxWxB.png</strong>.</td>
+</tr>
+<tr>
+<td><code>-u</code>, <code>--unsubscribe</code></td>
+<td>Unsubscribes the specified resource from the given store.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>-s</code>, <code>--subscribe</code></td>
+<td>Subscribes the specified resource from the given store.</td>
+<td>If you use a different Receiver, subscriptions on Program Neighborhood Agent servers are lost.</td>
+</tr>
+<tr>
+<td><code>-W [r|R]</code>, <code>--reconnect [r|R]</code></td>
+<td>Reconnects disconnected and active sessions.</td>
+<td><code>r</code> reconnects all disconnected sessions for the user. <code>R</code> reconnects all active and disconnected sessions.</td>
+</tr>
+<tr>
+<td><code>-WD</code>, <code>--disconnect</code></td>
+<td>Disconnects all sessions.</td>
+<td>Only affects sessions to the store specified on the command line.</td>
+</tr>
+<tr>
+<td><code>-WT</code>, <code>--logoff</code></td>
+<td>Logs off all sessions.</td>
+<td>Only affects sessions to the store specified on the command line.</td>
+</tr>
+<tr>
+<td><code>-l</code>, <code>--liststores</code></td>
+<td>Lists the known StoreFront stores, that is those that storebrowse can contact. These are the stores registered with the ServiceRecord proxy. Also lists Program Neighborhood sites.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>-a</code>, <code>--addstore</code></td>
+<td>Registers a new store, including its gateway and beacon details, with the Service Record daemon.</td>
+<td>Returns the full URL of the store. If this fails, an error is reported.</td>
+</tr>
+<tr>
+<td><code>-g</code>, <code>--storegateway</code></td>
+<td>Sets the default gateway for a store that is already registered with the Service Record daemon.</td>
+<td>This command takes the following form: <code>./util/storebrowse --storegateway "&lt;unique gateway name&gt;" '&lt;store URL&gt;'</code> <br/> <strong>Important:</strong> The unique gateway name must be in the list of gateways for the specified store.</td>
+</tr>
+<tr>
+<td><code>-d</code>, <code>--deletestore</code></td>
+<td>Deregisters a store with the Service Record daemon.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>-c</code>, <code>--configselfservice</code></td>
+<td>Gets and sets the self-service UI settings that are stored in StoreCache.ctx. Takes an argument of the form <code>&lt;entry[=value]&gt;</code>. If only entry is present, the setting's current value is printed. If a value is present, it is used to configure the setting.</td>
+<td>Example: <code>storebrowse --configselfservice SharedUserMode=True</code> <br/> <strong>Important:</strong> Both entry and value are case sensitive. Commands that use this option will fail if the case is different to the documented case of the setting itself (in StoreCache.ctx).</td>
+</tr>
+<tr>
+<td><code>-C</code>, <code>--addCR</code></td>
+<td>Reads the provided Citrix Receiver (CR) file, and prompts the user to add each store.</td>
+<td>The output is the same as <code>-a</code> but might contain more than one store, separated by newlines.</td>
+</tr>
+<tr>
+<td><code>-K</code>, <code>--killdaemon</code></td>
+<td>Terminates the storebrowse daemon process.</td>
+<td>All credentials and tokens are purged.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="pnabrowse"><a class="toclink" href="#pnabrowse">pnabrowse</a></h2>
+<div class="admonition caution">
+<p class="admonition-title">Important<p>The <code>pnabrowse</code> utility is deprecated but can still query Program Neighborhood Agent sites that run the Web Interface for lists of servers and published resources, and lets you connect to a published resource. Citrix discourages the use of <code>pnabrowse</code> with StoreFront stores; use <code>storebrowse</code> instead. <code>storebrowse</code> can prompt for credentials from sites and stores. The <code>-U</code>, <code>-P</code> and <code>-D</code> options only work with Program Neighborhood Agent sites. </p>
+</p>
+</div>
+<p>An optional argument of pnabrowse specifies the server to connect to. This may be either: 
+<li> The name of the XenApp server, for options <code>-S</code> and <code>-A</code>. 
+<li> The URL of the server running Web Interface, for options <code>-E</code> and <code>-L</code>. </p>
+<p>The <code>pnabrowse</code> utility returns an exit value indicating success or failure, and can use the following options with XenApp: </p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-S</code></td>
+<td>List servers, one per line.</td>
+</tr>
+<tr>
+<td><code>-A</code></td>
+<td>List published applications, one per line.</td>
+</tr>
+<tr>
+<td><code>-m</code></td>
+<td>Used in conjunction with <code>-A</code>, this expands the information returned about published applications to include Publisher, Video Type, Sound Type, AppInStartMenu, AppOnDesktop, AppIsDesktop, AppIsDisabled, Window Type, WindowScale, and Display Name.</td>
+</tr>
+<tr>
+<td><code>-M</code></td>
+<td>Used in conjunction with <code>-A</code>, this selects individual columns of information returned about published applications. It takes an argument (1-1023) which is the sum of the numbers corresponding to the required details: Publisher(1), Video Type(2), Sound Type(4), AppInStartMenu(8), AppOnDesktop(16), AppIsDesktop(32), AppIsDisabled(64), Window Type(128), Window Scale(256), and DisplayName(512).</td>
+</tr>
+<tr>
+<td><code>-c</code></td>
+<td>When appended to option <code>-A</code>, create files specifying the minimum information the client engine needs to connect to published applications; for example, application name, browse server, window resolution, color depth, audio, and encryption settings. File names are formatted as follows: <code>/tmp/xxx_1.ica</code>, <code>/tmp/xxx_2.ica</code> where <strong>xxx</strong> is replaced by the decimal process identifier for the pnabrowse process.</td>
+</tr>
+<tr>
+<td><code>-d</code></td>
+<td>Used in conjunction with <code>-L</code> to specify the XDG desktop file.</td>
+</tr>
+<tr>
+<td><code>-e</code></td>
+<td>Shows error numbers.</td>
+</tr>
+<tr>
+<td><code>-i</code></td>
+<td>Include paths to files containing icon images for published applications in the output from option <code>-A</code>. Either .xpm or .png files are returned depending on the use of the size (WxB) option: <br/> <li> <code>-i</code> returns 16x16 icons in XPM format at 4 bits per pixel <li> <code>-iWxB</code> returns WxW icons in PNG format at B bits per pixel</td>
+</tr>
+<tr>
+<td><code>-f</code></td>
+<td>Include Citrix XenApp folder names for published applications in the output from option <code>-A</code>.</td>
+</tr>
+<tr>
+<td><code>-u</code></td>
+<td>Specify a user name for authenticating the user to a proxy server.</td>
+</tr>
+<tr>
+<td><code>-p</code></td>
+<td>Specify a password for authenticating the user to a proxy server.</td>
+</tr>
+</tbody>
+</table>
+<p>The following options provide Citrix XenApp (Program Neighborhood Agent) Services functionality and can be used with both XenApp and XenDesktop functionality: </p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-D</code></td>
+<td>Specify a domain for authenticating the user to the server running the Web Interface or the server running the Citrix XenApp (Program Neighborhood Agent) Service.</td>
+</tr>
+<tr>
+<td><code>-E</code></td>
+<td>Invoke Citrix XenApp and enumerate all published resources. <br/> If you specify both <code>-E</code> and <code>-L</code>, the last option on the command line takes effect. The utility then terminates, possibly leaving a connection open. <br/> For each resource the following details are written to standard output, enclosed in single quotation marks and separated by tab characters: <br/> <strong>Name:</strong> The display name from the Access Management Console Application Properties dialog box. <br/><strong>Folder:</strong> The Program Neighborhood folder from the Access Management Console Application Properties dialog box. <br/><strong>Type:</strong> Either Application or Content. <br/><strong>Icon:</strong> The full path name of an .xpm format icon file.</td>
+</tr>
+<tr>
+<td><code>-L</code></td>
+<td>Specify the name of the published resource to which you want to connect. This invokes Citrix XenApp and launches a connection to a published resource. If you specify both -E and-L, the last option on the command line takes effect. The utility then terminates, possibly leaving a connection open.</td>
+</tr>
+<tr>
+<td><code>-N</code></td>
+<td>Specify a new password. This option must be used with existing credentials and is valid only when the existing password has expired, as indicated by the exit code 238: E_PASSWORD_EXPIRED.</td>
+</tr>
+<tr>
+<td><code>-P</code></td>
+<td>Specify a password for authenticating the user to the server running the Web Interface or the server running the Citrix XenApp (Program Neighborhood Agent) Service.</td>
+</tr>
+<tr>
+<td><code>-U</code></td>
+<td>Specify a user name for authenticating the user to the server running the Web Interface or the server running the Citrix XenApp (Program Neighborhood Agent) Service.</td>
+</tr>
+<tr>
+<td><code>-WD</code></td>
+<td>Disconnects all active sessions for the user.</td>
+</tr>
+<tr>
+<td><code>-WT</code></td>
+<td>Terminates all sessions for the user.</td>
+</tr>
+<tr>
+<td><code>-Wr</code></td>
+<td>Reconnects to all disconnected sessions for the user.</td>
+</tr>
+<tr>
+<td><code>-WR</code></td>
+<td>Reconnects to all sessions (active or disconnected) for the user.</td>
+</tr>
+<tr>
+<td><code>-k</code></td>
+<td>Use an existing Kerberos ticket to authenticate, rather than user name, password, and domain. This requires configuration of the client and server. For more information, see the Using Kerberos with Citrix Receiver for Linux Guide. This is available from Citrix under a non-disclosure agreement.</td>
+</tr>
+</tbody>
+</table>
+<p>The following common options are used: </p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-q</code></td>
+<td>Quiet mode; do not print error messages.</td>
+</tr>
+<tr>
+<td><code>-r</code></td>
+<td>Include raw icon data for published applications in the output from options <code>-E</code> or <code>-A</code>.</td>
+</tr>
+<tr>
+<td><code>-V</code></td>
+<td>Displays version details.</td>
+</tr>
+<tr>
+<td><code>-h</code></td>
+<td>Print a usage message listing the options.</td>
+</tr>
+<tr>
+<td><code>-?</code></td>
+<td>Print a usage message listing the options.</td>
+</tr>
+</tbody>
+</table>
+              
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<!--<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+      
+    </span>
+	<div class="footer-right">
+		<ul class="social-links">
+			<li class="list-inline"><a href="https://twitter.com/citrix"><i class="fa fa-twitter"></i>@citrix</a></li>
+			<li class="list-inline"><a href="mailto:support@citrix.com"><i class="fa fa-envelope-o"></i>support@citrix.com</a></li>
+		</ul>
+		<ul class="inner-pages">
+			<li class="list-inline"><a href="http://citrix.com/about/legal">Privacy and Terms</li>
+		</ul>
+	</div>
+</div>-->
+
+</body>
+</html>
+
+<!--
+MkDocs version : 0.16.1
+Build Date UTC : 2017-03-13 10:50:01
+-->
